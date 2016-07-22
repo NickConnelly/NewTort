@@ -1,0 +1,12 @@
+from django.shortcuts import render
+from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import SourceTexts, SourceTextsFormPage
+
+class SourceTextCreate(CreateView):
+    model = SourceTexts
+    fields = ['source_text', 'from_language', 'to_language']
+
+class SourceTextsFormPageCreate(CreateView):
+    model = SourceTextsFormPage
+    fields = ['intro','source_text', ' from_language', 'to_language']

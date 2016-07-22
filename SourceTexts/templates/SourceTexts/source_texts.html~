@@ -1,0 +1,14 @@
+<H1> Title: {{ page.title }} </h1>
+
+<p> The Text to be translated is:<br/><br/>{{ page.source_text }}<br/><br/></p>
+
+<p> The source language is:<br/><br/>{{ page.from_language }}<br/><br/></p>
+
+<p> The translation language is:<br/><br/>{{ page.to_language }}<br/><br/></p>
+
+<form action="/micr/Frequency_list">
+    <input type="submit" value="Generate Frequency List">
+</form>
+<form action="http://google.com">
+    <input type="submit" value="Show Frequency List">
+</form>

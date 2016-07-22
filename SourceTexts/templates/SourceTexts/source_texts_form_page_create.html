@@ -1,0 +1,16 @@
+{% load pageurl SourceText-add %}
+{% load wagtailcore_tags %}
+
+<html>
+    <head>
+    </head>
+    <body>
+        {{ self.to_language }}
+        <form action="{% pageurl self %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    </body>
+</html>
+

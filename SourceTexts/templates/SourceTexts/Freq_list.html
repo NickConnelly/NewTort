@@ -1,0 +1,19 @@
+<html>
+{% block content %}
+    <table>
+      <tr>
+        <td>Source Text</td>
+        <td>Translation</td>
+        <td>Frequency</td>
+      </tr>
+    {% for x in FL %}
+      <tr>
+        <td>{{ x.source_text_string }}</td>
+        <td>{{ x.translation_text_string }}</td>
+        <td>{{ x.frequency }}</td>
+        <td>BOOM</td>
+      </tr>
+    {% endfor %}
+    </table>
+{% endblock content %}
+</html>

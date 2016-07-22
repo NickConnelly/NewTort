@@ -1,0 +1,10 @@
+
+{% block title %}Would you like to translate something?{% endblock %}
+
+{% block body %}
+  <form action="" method="post">
+    {{ page.title }}
+    {{ page.source_text }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

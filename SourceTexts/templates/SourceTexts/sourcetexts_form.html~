@@ -1,0 +1,13 @@
+{% block title %}Would you like to translate something?{% endblock %}
+
+{% block body %}
+  <form action="{% pageurl page %}" method="post">
+    {% for field in form %}
+      {% csrf_token %}
+      <span> {{ field.errors }} </span>
+      <label>{{ field.label_tag }}</label>
+      <div>{{ field }}</div>
+    {% endfor %}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "home/templates/home/home_page.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text}}</p>
+	    <a href="{% url 'post_delete' pk=post.pk %}">Delete</a>
+            <a href="{% url 'show_frequency_list' pk=post.pk %}">Show me the list</a>
+    {% endfor %}
+{% endblock content %}
+

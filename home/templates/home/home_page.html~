@@ -1,0 +1,23 @@
+{% load wagtailcore_tags %}
+<!--
+<h1>A list of all Child pages:</h1>
+<p><br/></p>
+{% for page in self.get_children %}
+  <p>
+	<a href="{% pageurl page %}">{{ page.title }}</a><br/>
+  </p>
+{% endfor %}
+-->
+<html>
+   <head><a href="{% url 'post_new' %}">New Source Text</a></head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="viewposts">
+        {% block view %}
+        <a href="{% url 'post_list' %}">View My Source Texts</a>
+        {% endblock %}
+    </div>
+</body>
+</html>

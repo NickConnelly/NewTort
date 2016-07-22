@@ -1,0 +1,12 @@
+<html>
+{% block content %}
+    <h1>Detail Page</h1>
+    <form>
+	{% csrf_token %}
+        {{ DF.title }}
+        {{ DF.ST }}
+        {{ DF.TL }}
+        {{ DF.FL }}
+    </form>
+{% endblock %}
+</html>

@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+<h1>A list of all Assets:</h1>
+<p><br/></p>
+{% for page in self.get_children %}
+  <p>
+	<a href="{% pageurl page %}">{{ page.title }}</a><br/>
+  </p>
+{% endfor %}

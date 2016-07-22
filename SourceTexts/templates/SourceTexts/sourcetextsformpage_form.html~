@@ -1,0 +1,25 @@
+{% load wagtailcore_tags %}
+
+<html>
+    <head>
+        <h1>{{ self.title }}</h1>
+	<h2>Would you like to translate something?</h2>
+    </head>
+    <body>
+      <form action="" method="POST">
+      {% csrf_token %}
+      Title:<br>
+      <input type="text" name="title"><br>
+      Path:<br>
+      <input type="text" name="path"><br>
+      depth:<br>
+      <input type="text" name="depth"><br>
+      slug:<br>
+      <input type="text" name="slug"><br>
+      {{form.as_p}}
+      <input type="submit">
+      <button type="submit">Submit</button>
+      </form>
+    </body>
+</html>
+

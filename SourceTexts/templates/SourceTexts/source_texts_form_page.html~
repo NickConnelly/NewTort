@@ -1,0 +1,25 @@
+{% load wagtailcore_tags %}
+
+<html>
+    <head>
+        <h1>{{ self.title }}</h1>
+    </head>
+    <body>
+{% block title %}Would you like to translate something?{% endblock %}
+
+{% block body %}
+  <form action="" method="post">
+    {% csrf_token %}
+    Title:<br>
+    <input type="text" name="title"><br>
+    Source Text:<br>
+    <input type="text" name="source_text"><br>
+    From Language:<br>
+    <input type="text" name="from_language">
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
+        </form>
+    </body>
+</html>
+

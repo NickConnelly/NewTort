@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+from django.conf.urls import patterns, url
+
+urlpatterns = patterns('Tortoisewag742016.Translator.translator',
+    url(r'^maketranslate/$', 'maketranslate'),
+)
+
+urlpatterns += patterns('Tortoisewag742016.Translator.Frequency_list',
+    url(r'^Frequency_list/(.*)', 'Frequency_list'),
+)
+
+urlpatterns += patterns('Tortoisewag742016.Translator.views',
+    url(r'^list_frequency_lists/$', 'list_frequency_list'),
+)
+
+urlpatterns += patterns('Tortoisewag742016.Translator.Frequency_list_functions',
+    url(r'^demo_text/(.*)', 'converted', name='converted'),
+)
